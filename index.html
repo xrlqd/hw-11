@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Menu - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#menu" ).menu();
+  } );
+  </script>
+  <style>
+  .ui-menu { width: 150px; }
+  </style>
 </head>
 <body>
-	<div></div>
-	<h1 id="228">
-		hi
-	</h1>
-	<script>
-		var element = document.getElementById("228");
-		element.prepend("<h1 class='b'>GG</h1>");
-		element.append("<h3 class='v'>WP</h3>");
-
-		console.log(element);
-	</script>
-</body>
+ 
+<ul id="menu">
+  <li class="ui-state-disabled"><div>Цены на ёлки новогодние</div></li>
+  <li><div>Маленькие ёлки</div>
+  	<ul>
+      <li class="ui-state-disabled"><div>Цена: 60 гривен</div></li>
+    </ul>
+   </li>
+  <li><div>Средние ёлки</div>
+  	<ul>
+      <li class="ui-state-disabled"><div>Цена: 1200 гривен</div></li>
+    </ul>
+   </li>
+  <li><div>Большие ёлки</div>
+    <ul>
+      <li class="ui-state-disabled"><div>Цена: 240000 гривен</div></li>
+    </ul>
+  </li>
+</ul>
+ </body>
 </html>
